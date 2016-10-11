@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round);
+
+$main-font: 'ABeeZee', sans-serif;
+$second-font: 'Crete Round', serif;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+	color: white;
+	font-family: $main-font;
+	font-weight: bold;
+}
+
+h1, h2 {
+	font-family: $second-font;
+}
+
+body {
+	background: url(https://my.vetmatrixbase.com/clients/12543/images/cat-and-dog-hd-hd.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+button {
+	border: 2px dotted white;
+	background-color: transparent;
+	border-radius: 20px;
+	font-size: 13px;
+	padding: 1px 10px ;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		background-color: rgba(166, 166, 166, 0.5);
+	}
+}
+
+/******* HEADER *******/
+
+h1 {
+	margin: 50px 15px 20px 15px;
+	font-size: 50px;
+	text-align: center;
+}
+
+#day {
+	display: flex;
+	justify-content: center;
+}
+
+.create-column {
+	margin: 50px 40px 25px 60px;
+	border: 3px solid white;
+	font-size: 25px;
+}
+
+/******* COLUMN CONTAINER *******/
+
+.column-container {
+	margin: 20px 50px;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+	margin: 10px 0;
+}
+
+.column-date {
+	border-bottom: 1px dotted white;
+}
+
+.btn-delete {
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 10px;
+}
+
+li {
+	margin-left: 20px;
+	.btn-delete {
+		font-size: 18px;	
+	}
+	p {
+		display: inline;
+	}
+}
+
+.card {
+	font-size: 22px;
+}

@@ -4,7 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
-  color: white;
+  color: #ffffff;
   font-family: "ABeeZee", sans-serif;
   font-weight: bold; }
 
@@ -12,11 +12,11 @@ h1, h2 {
   font-family: "Crete Round", serif; }
 
 body {
-  background: url(https://my.vetmatrixbase.com/clients/12543/images/cat-and-dog-hd-hd.jpg) no-repeat center center fixed;
+  background: url(../images/background.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 button {
-  border: 2px dotted white;
+  border: 2px dotted #ffffff;
   background-color: transparent;
   border-radius: 20px;
   font-size: 13px;
@@ -38,7 +38,7 @@ h1 {
 
 .create-column {
   margin: 50px 40px 25px 60px;
-  border: 3px solid white;
+  border: 3px solid #ffffff;
   font-size: 25px; }
 
 /******* COLUMN CONTAINER *******/
@@ -51,7 +51,7 @@ h1 {
   margin: 10px 0; }
 
 .column-date {
-  border-bottom: 1px dotted white; }
+  border-bottom: 1px dotted #ffffff; }
 
 .btn-delete {
   border: none; }

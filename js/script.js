@@ -1,10 +1,7 @@
 $(function() {
 
 var day = document.getElementById('day');
-var date = new Date();
-var today = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-//var today = new Date().toJSON().slice(0,10);
-day.innerHTML = today;
+day.innerHTML = moment().format('MMMM Do YYYY');
 	
 function randomString() {
 	var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
@@ -35,8 +32,7 @@ function Column(name) {
   this.element = createColumn();
 
   function createColumn() {
-	  var date = new Date();
-	  var today = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+	  var today = moment().format('LTS');
 	  var column = $('<div>').addClass('column col-xs-12 col-sm-4 col-md-3');
 	  var columnTitle = $('<h2>').addClass('column-title').text(self.name);
 	  var columnDate = $('<p>').addClass('column-date').text(today);
@@ -114,7 +110,11 @@ function initSortable() {
   }).disableSelection();
 }
 
-$("#sortable").sortable();
+$("#sortable").sortable({
+    change: function(event, ui) {
+      ui.placeholder.css({visibility: 'visible', border : '1px dotted white', background : 'rgba(183,183,183,0.5)'});
+    }
+});
 $("#sortable").disableSelection();
 
 $('.create-column')
